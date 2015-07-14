@@ -1,0 +1,21 @@
+{
+  "name": "PartyPrint",
+  "version": "0.1.0",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "~6.0.2",
+    "envify": "~3.0.0",
+    "reactify": "~0.14.0",
+    "uglify-js": "~2.3.6",
+    "watchify": "~1.0.6",
+    "react": "~0.11.2",
+    "react-async": "~1.0.2",
+    "react-router-component": "~0.22.0"
+  },
+  "scripts": {
+    "server": "node www/server.js",
+    "build": "browserify -t reactify www/index.js | uglifyjs -cm > www/bundle.js ",
+    "develop": "watchify -d -t reactify www/index.js -o  www/bundle.js "
+  },
+  "author": "Jeremy Eaton <jeremyeaton89@gmail.com>"
+}

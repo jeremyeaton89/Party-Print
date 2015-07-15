@@ -7,10 +7,7 @@
     "envify": "~3.0.0",
     "reactify": "~0.14.0",
     "uglify-js": "~2.3.6",
-    "watchify": "~1.0.6",
-    "react": "~0.11.2",
-    "react-async": "~1.0.2",
-    "react-router-component": "~0.22.0"
+    "watchify": "~1.0.6"
   },
   "scripts": {
     "server": "node www/server.js",

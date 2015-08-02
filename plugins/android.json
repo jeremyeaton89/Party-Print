@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Printer\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.printer.Printer\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -22,6 +26,9 @@
             "PACKAGE_NAME": "com.jeremyeaton.partyprint"
         },
         "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.jeremyeaton.partyprint"
+        },
+        "de.appplant.cordova.plugin.printer": {
             "PACKAGE_NAME": "com.jeremyeaton.partyprint"
         }
     },

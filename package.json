@@ -10,9 +10,14 @@
     "watchify": "~1.0.6"
   },
   "scripts": {
-    "server": "node www/server.js",
+    "start": "node www/server.js",
     "build": "browserify -t reactify www/index.js | uglifyjs -cm > www/bundle.js ",
     "develop": "watchify -d -t reactify www/index.js -o  www/bundle.js "
   },
-  "author": "Jeremy Eaton <jeremyeaton89@gmail.com>"
+  "author": "Jeremy Eaton <jeremyeaton89@gmail.com>",
+  "devDependencies": {
+    "envify": "^3.0.0",
+    "react": "^0.13.3",
+    "react-router-component": "^0.26.0"
+  }
 }

@@ -10,9 +10,19 @@ var Feed = React.createClass({
       imageSources: [], 
     };
   },
+  getDefaultProps: function() {
+    return {
+      maxTagId: null,
+    };
+  },
   componentDidMount: function() {
+    setInterval(function() {
+      this.getImages();
+    }.bind(this), 1000); 
+  },
+  getImages: function() {
     $.getJSON(
-      'https://api.instagram.com/v1/tags/tbt/media/recent?callback=?',
+      'https://api.instagram.com/v1/tags/partyprinttest/media/recent?count=100&max_tag_id='+this.props.maxTagId+'&callback=?',
       {
         client_id: '90af4f5aec3f4c0caf32d2cf8ed0d257',
       },
@@ -20,10 +30,13 @@ var Feed = React.createClass({
         if (status === 'error') {
           console.log('Failed to fetch Images');
         } else {
-          var imageSources = response.data.map(function(img) {
-            return img.images.standard_resolution.url;
-          });
-          this.setState({ imageSources: imageSources });
+          console.log('RESP', response);
+          this.props.maxTagId = response.pagination.next_max_tag_id;
+          response.data.forEach(function(img) {
+            this.state.imageSources.push(img.images.standard_resolution.url);
+          }.bind(this));
+
+          this.setState({ imageSources: this.state.imageSources });
         }
       }.bind(this)
     );
@@ -41,7 +54,7 @@ var Feed = React.createClass({
       <div>
         <Header />
         <div style={styles.imagesContainer}>
-          {images}
+          {images.reverse()}
         </div>
       </div>
     );

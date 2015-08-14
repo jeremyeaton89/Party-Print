@@ -40,6 +40,7 @@
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/lib \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/plugins \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/server.js \
+/Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/utils.js \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/components/Feed.js \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/components/FeedImage.js \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/components/Header.js \

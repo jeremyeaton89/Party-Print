@@ -15,7 +15,7 @@ var Feed = React.createClass({
   getDefaultProps: function() {
     return {
       maxTagId: null,
-      feedHeight: 0,
+      atBottom: true,
     };
   },
   componentDidMount: function() {
@@ -24,12 +24,15 @@ var Feed = React.createClass({
       this.getImages();
     }.bind(this), 10000); 
   },
+  componentWillUpdate: function(nextProps, nextState) {
+    var feedContainerHeight = $(this.refs.feedContainer.getDOMNode()).height();
+    this.props.atBottom = (window.innerHeight >= feedContainerHeight) || (window.innerHeight + window.scrollY) >= feedContainerHeight);
+  },
   componentDidUpdate: function() {
-    var prevHeight = this.props.feedHeight;
-    this.props.feedHeight = $(this.refs.feedContainer.getDOMNode()).height();
-
-    if ($('body').scrollTop()) {
-      $('body').scrollTop($('body').scrollTop() + (this.props.feedHeight - prevHeight));
+    if (this.props.atBottom) {
+      $('html, body').animate({
+        scrollTop: $(this.refs.feedContainer.getDOMNode()).height()
+      }, 2000);
     }
   },
   getImages: function() {
@@ -43,12 +46,12 @@ var Feed = React.createClass({
           console.log('Failed to fetch Images');
         } else {
           this.props.maxTagId = response.pagination.next_max_tag_id;
-          console.log(response)
+
           response.data.forEach(function(img) {
             var inputVal  = $('input[type=search]').val().trim();
             var searchVal = inputVal ? ('^' + inputVal) : '';
             var username  = img.user.username;
-            this.state.images.unshift(
+            this.state.images.push(
               <FeedImage 
                 src={img.images.low_resolution.url}
                 username={username}

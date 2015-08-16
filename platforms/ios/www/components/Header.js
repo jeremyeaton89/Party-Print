@@ -3,6 +3,18 @@
 var React = require('react');
 
 var Header = React.createClass({
+  componentDidMount: function() {
+    this.addListeners();
+  },
+  addListeners: function() {
+    var header = this.refs.header.getDOMNode();
+
+    $(this.refs.searchBar.getDOMNode()).focus(function() {
+      $(header).css('position', 'absolute');
+    }).blur(function() {
+      $(header).css('position', 'fixed');
+    });
+  },
   print: function() {
     // TODO: get hi res photos
     var page = '';
@@ -12,18 +24,27 @@ var Header = React.createClass({
     console.log(page);
     window.plugin.printer.print(page);
   },
-  filter: function(a) {
+  filter: function() {
     var searchValue = this.refs.searchBar.getDOMNode().value;
     if (searchValue.length) {
-      $('#imagesContainer div:not([data-username^="'+searchValue+'"])').hide();
-      $('#imagesContainer div[data-username^="'+searchValue+'"]').show();
+      $('#feedContainer div:not([data-username^="'+searchValue+'"])').hide();
+      $('#feedContainer div[data-username^="'+searchValue+'"]').show();
     } else {
-      $('#imagesContainer div').show();
+      $('#feedContainer div').show();
     }
   },
   render: function() {
     return (
-      <div style={styles.header} >
+      <div 
+        ref='header'
+        style={styles.header} >
+
+        <button
+          style={styles.settingsButton}
+          onClick={this.showSettings}>
+          Settings
+        </button>
+
         <input 
           type='search' 
           ref='searchBar'
@@ -31,6 +52,7 @@ var Header = React.createClass({
           style={styles.searchBar}
           onChange={this.filter}
         />
+
         <button 
           style={styles.printButton} 
           onClick={this.print}>
@@ -46,17 +68,26 @@ var styles = {
   header: {
     width: '100%',
     height: 60,
-    background: 'gray',
+    background: 'rgba(255, 0, 0, 0.67)',
+    position: 'absolute',
+    zIndex: 2,
+    top: 0,
   },
-  searchBar: {
+  settingsButton: {
     position: 'absolute',
     top: 20,
-    left: 40,
+    left: 10,
+  },
+  searchBar: {
+    left: 'calc(50% - 100px)',
+    position: 'absolute',
+    width: 200,
+    top: 20,
   },
   printButton: {
     position: 'absolute',
     top: 20,
-    right: 0,
+    right: 10,
   }
 }
 

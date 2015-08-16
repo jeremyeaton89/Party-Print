@@ -25,13 +25,19 @@ var Feed = React.createClass({
     }.bind(this), 10000); 
   },
   componentWillUpdate: function(nextProps, nextState) {
-    var feedContainerHeight = $(this.refs.feedContainer.getDOMNode()).height();
-    this.props.atBottom = (window.innerHeight >= feedContainerHeight) || (window.innerHeight + window.scrollY) >= feedContainerHeight);
+    var $feedContainer = $(this.refs.feedContainer.getDOMNode());
+    var feedContainerHeight = $(this.refs.feedContainer.getDOMNode()).innerHeight();
+    $('#imagesContainer').scrollTop() + $('#imagesContainer').innerHeight()
+
+    this.props.atBottom = (($feedContainer[0].scrollHeight === $feedContainer.innerHeight()) || 
+                          ($feedContainer.scrollTop() + $feedContainer.innerHeight()) >=  $feedContainer[0].scrollHeight);
   },
   componentDidUpdate: function() {
     if (this.props.atBottom) {
-      $('html, body').animate({
-        scrollTop: $(this.refs.feedContainer.getDOMNode()).height()
+      var $feedContainer = $(this.refs.feedContainer.getDOMNode());
+
+      $feedContainer.animate({
+        scrollTop: $feedContainer[0].scrollHeight
       }, 2000);
     }
   },
@@ -70,11 +76,12 @@ var Feed = React.createClass({
   },
   render: function() {
     return (
-      <div ref='feedContainer' id='feedContainer'>
+      <div className='page' >
         <Header />
-        <button id='pause' onClick={this.pause} style={{position: 'fixed', left: 10, top: 10, zIndex: 99999}}>pause</button>
+        <button id='pause' onClick={this.pause} style={{position: 'fixed', left: 10, top: 100, zIndex: 99999}}>pause</button>
         <div 
-          ref='imagesContainer' 
+          ref='feedContainer' 
+          id='feedContainer'
           style={styles.imagesContainer}>
 
           {this.state.images}
@@ -87,9 +94,15 @@ var Feed = React.createClass({
 
 var styles = {
   imagesContainer: {
-    width: 320,
+    width: '100%',
     height: '100%',
     margin: '0 auto',
+    paddingTop: 60,
+    paddingLeft: 'calc(50% - 150px)',
+    paddingRight: 'calc(50% - 165px)',
+    boxSizing: 'border-box',
+    overflowY: 'scroll',
+    WebkitOverflowScrolling: 'touch',
   },
 }
 

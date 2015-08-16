@@ -53,8 +53,8 @@ var FeedImage = React.createClass({
 var styles = {
   container: {
     cursor: 'pointer',
-    width: 160,
-    height: 160,
+    width: 150,
+    height: 150,
     overflow: 'hidden',
     display: 'inline-block',
     boxSizing: 'border-box',

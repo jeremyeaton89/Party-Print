@@ -77,7 +77,7 @@ var Feed = React.createClass({
   render: function() {
     return (
       <div className='page' >
-        <Header />
+        <Header left='settings' middle='search' right='print'/>
         <button id='pause' onClick={this.pause} style={{position: 'fixed', left: 10, top: 100, zIndex: 99999}}>pause</button>
         <div 
           ref='feedContainer' 

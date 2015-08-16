@@ -44,8 +44,12 @@
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/components/Feed.js \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/components/FeedImage.js \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/components/Header.js \
+/Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/components/Settings.js \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/css/index.css \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/img/checkmark-icon.png \
+/Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/img/printer-icon.png \
+/Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/img/settings-icon.png \
+/Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/img/x-icon.png \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/lib/config.js \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/lib/css \
 /Users/jeremyeaton/Desktop/Projects/PartyPrint/platforms/android/assets/www/lib/js \

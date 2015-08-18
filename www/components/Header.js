@@ -50,14 +50,22 @@ var Header = React.createClass({
 
     switch(this.props.left) {
       case 'settings': 
-          left = 
-            <Link
-              noTransition
-              href='/settings'
-              style={Utils.merge(styles.iconContainer, { left: 10 })}>
-              <div style={Utils.merge(styles.icon, { backgroundImage: 'url(img/settings-icon.png)'})}></div>
-            </Link> 
+        left = 
+          <Link
+            noTransition
+            href='/settings'
+            style={Utils.merge(styles.iconContainer, { left: 10 })}>
+            <div style={Utils.merge(styles.icon, { backgroundImage: 'url(img/settings-icon.png)'})}></div>
+          </Link> 
         break;
+      case 'feed':
+        left = 
+          <Link
+            noTransition
+            href='/'
+            style={Utils.merge(styles.iconContainer, { left: 10 })}>
+            <div style={Utils.merge(styles.icon, { backgroundImage: 'url(img/feed-icon.png)', width: 30, height: 30 })}></div>
+          </Link> 
     }
     switch(this.props.middle) {
       case 'search': 
@@ -83,6 +91,15 @@ var Header = React.createClass({
             </div>
           </div>
         break;
+      default:
+        middle = 
+          <div style={styles.titleContainer}>
+            <h1 
+              ref='title' 
+              style={styles.title}>
+              {this.props.title}
+            </h1>
+          </div>
     }
     switch(this.props.right) {
       case 'print':
@@ -107,7 +124,7 @@ var Header = React.createClass({
 var styles = {
   container: {
     width: '100%',
-    height: 60,
+    height: 70,
     background: 'rgba(255, 0, 0, 0.67)',
     position: 'absolute',
     zIndex: 2,
@@ -122,7 +139,7 @@ var styles = {
     left: 60,
     position: 'absolute',
     width: 200,
-    top: 15,
+    top: 25,
     outline: 'none',
     borderRadius: 20,
     padding: '5px 30px 3px 15px',
@@ -150,7 +167,7 @@ var styles = {
     height: 18,
     borderRadius: 21,
     position: 'absolute',
-    top: 23,
+    top: 33,
     right: 70,
     zIndex: 3,
     cursor: 'pointer',
@@ -166,14 +183,15 @@ var styles = {
   },
   iconContainer: {
     position: 'absolute',
-    top: 10,
+    top: 20,
     width: 50,
     height: 50,
     cursor: 'pointer',
     textDecoration: 'none',
   },
   title: {
-    fontFamily: 'Indie Flower',
+    fontFamily: 'Special Elite, cursive',
+    fontWeight: 100,
     color: 'white',
     textAlign: 'center',
     margin: 0,
@@ -188,7 +206,7 @@ var styles = {
     position: 'absolute',
     left: '50%',
     width: '75%',
-    top: 28,
+    top: 25,
   },
 }
 

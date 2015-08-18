@@ -7,7 +7,8 @@ var Location           = Router.Location;
 var Link               = Router.Link;
 var FastClick          = require('./lib/js/fastclick');
 
-var Feed               = require('./components/Feed');
+var Feed     = require('./components/Feed');
+var Settings = require('./components/Settings');
 
 var AnimatedLocations = React.createClass({
   mixins: [Router.RouterMixin, Router.AsyncRouteRenderingMixin],
@@ -40,8 +41,9 @@ var AnimatedLocations = React.createClass({
 var App = React.createClass({
   render: function() {
     return (
-      <AnimatedLocations hash className='main' transitionName='left'>
-        <Location path='/'                handler={Feed} />
+      <AnimatedLocations hash className='main'>
+        <Location path='/'         handler={Feed} />
+        <Location path='/settings' handler={Settings} />
       </AnimatedLocations>
     );
   }
@@ -50,5 +52,5 @@ var App = React.createClass({
 
 $(function() {
   if (typeof FastClick == 'function') FastClick(document.body);
-  React.render(<Feed />, document.getElementById('container'));
+  React.render(<App />, document.getElementById('container'));
 });

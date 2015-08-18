@@ -23,9 +23,9 @@ var FeedImage = React.createClass({
   },
   render: function() {
     var selected         = this.state.selected;
-    var displayContainer = this.props.hide ? 'none'           : 'inline-block';
-    var displayCheckmark = selected        ? 'block'          : 'none';
-    var border           = selected        ? '3px solid teal' : 'none';
+    var displayContainer = this.props.hide ? 'none'              : 'inline-block';
+    var displayCheckmark = selected        ? 'block'             : 'none';
+    var border           = selected        ? '3px solid #37CBCB' : 'none';
 
     return (
       <div 

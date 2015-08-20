@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var Utils = require('../utils');
 
 var Header = require('./Header');
 
@@ -15,6 +16,28 @@ var Settings = React.createClass({
       window.tag = value;
       $input.val('#'+value);
     }
+  },
+  focusAgeLimitInput: function() {
+    $(this.refs.ageLimit.getDOMNode()).focus();
+  },
+  validateAgeLimit: function() {
+    var $input = $(this.refs.ageLimit.getDOMNode());
+    var value  = $input.val();
+
+    if (value.length && !value.match(/^[1-9]\d{0,2}$/))
+      $input.val(value.slice(0,-1));
+  },
+  saveAgeLimit: function() {
+    var $input     = $(this.refs.ageLimit.getDOMNode());
+    var $hoursText = $(this.refs.hoursText.getDOMNode());
+
+    if (!$input.val()) {
+      $input.val(12);
+      window.ageLimit = 12;
+    } else {
+      window.ageLimit = $input.val();
+    }
+    window.ageLimit == 1 ? $hoursText.html('hour') : $hoursText.html('hours');
   },
   selectPrinter: function() {
     window.plugin.printer.print('');
@@ -41,8 +64,30 @@ var Settings = React.createClass({
                 placeholder='input a #tag'
                 defaultValue={window.tag ? ('#'+window.tag) : null}
                 onBlur={this.updateTag}
-                style={styles.tagInput}
+                style={styles.input}
               />
+            </li>
+            <li
+              style={styles.row}
+              onClick={this.focusAgeLimitInput}>
+              <label
+                style={styles.tagLabel}
+                htmlFor='ageLimit'>
+                Age Limit:
+              </label>
+              <input
+                ref='ageLimit'
+                type='text'
+                defaultValue={window.ageLimit ? window.ageLimit : 12}
+                onKeyUp={this.validateAgeLimit}
+                onBlur={this.saveAgeLimit}
+                style={Utils.merge(styles.input, { width: 40 })}
+              />
+              <span 
+                ref='hoursText'
+                style={{ color: 'gray' }}>
+                hours
+              </span>
             </li>
           </ul>
           <div style={styles.printerButtonContainer}>
@@ -72,11 +117,12 @@ var styles = {
     borderBottom: '1px solid lightgray',
     cursor: 'pointer',
     fontSize: 22,
+    marginBottom: 10,
   },
   tagLabel: {
 
   },
-  tagInput: {
+  input: {
     outline: 'none',
     border: 'none',
     padding: '0 0 0 10px',
@@ -90,6 +136,7 @@ var styles = {
   printerButton: {
     backgroundColor: 'gray',
     border: 'none',
+    outline: 'none',
     height: 35,
     padding: '0 10px',
     borderRadius: 9,

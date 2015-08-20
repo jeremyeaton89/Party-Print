@@ -9,5 +9,4 @@ Supplied with your unique #hashtag, partygoers can print their Instagram photos 
 - Feed pagination & caching
 - Show that a printer has been selected in the UI (include name?)
 - Enable Settings lock (by password)
-- Enable timeframe for image fetching
 - Android Support (maybe)

@@ -81,8 +81,13 @@ var Feed = React.createClass({
           console.log('Failed to fetch Images');
         } else {
           this.props.maxTagId = response.pagination.next_max_tag_id;
+          var ageLimit        = window.ageLimit ? window.ageLimit : 12;
+          var time            = new Date().getTime() / 1000;
 
           response.data.forEach(function(img) {
+            var age = (time - img.created_time) * 3600;
+            if (age < ageLimit) return;
+
             var inputVal  = $('input[type=search]').val().trim();
             var searchVal = inputVal ? ('^' + inputVal) : '';
             var username  = img.user.username;
@@ -132,12 +137,12 @@ var Feed = React.createClass({
   },
   pause: function() {
     clearInterval(this.props.interval);
-    // <button id='pause' onClick={this.pause} style={{position: 'fixed', left: 10, top: 100, zIndex: 99999}}>pause</button>
   },
   render: function() {
     return (
       <div className='page'>
         <Header left='settings' middle='search' right='print'/>
+    <button id='pause' onClick={this.pause} style={{position: 'fixed', left: 10, top: 100, zIndex: 99999}}>pause</button>
 
         <div 
           ref='promptContainer'

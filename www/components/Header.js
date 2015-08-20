@@ -73,10 +73,10 @@ var Header = React.createClass({
     }
     switch(this.props.middle) {
       case 'search': 
-        var searchBarWidth = window.innerWidth - 120;
+        var searchBarWidth = Math.min((window.innerWidth - 120), 400);
 
         middle = 
-          <div>
+          <div style={styles.searchBarContainer}>
             <input 
               type='search' 
               ref='searchBar'
@@ -86,7 +86,7 @@ var Header = React.createClass({
             />
             <div 
               ref='xIcon'
-              style={styles.xIconContainer}
+              style={Utils.merge(styles.xIconContainer, {  })}
               onClick={this.clearSearchBar}>
               <img 
                 src='img/x-icon.png'
@@ -140,9 +140,14 @@ var styles = {
     top: 20,
     left: 10,
   },
+  searchBarContainer: {
+    position: 'absolute',
+    left: '50%',
+  },
   searchBar: {
     left: 60,
-    position: 'absolute',
+    position: 'relative',
+    left: '-50%',
     width: 200,
     top: 25,
     outline: 'none',
@@ -171,9 +176,9 @@ var styles = {
     width: 18,
     height: 18,
     borderRadius: 21,
-    position: 'absolute',
-    top: 33,
-    right: 70,
+    position: 'relative',
+    left: '43%',
+    left: 'calc(50% - 27px)',
     zIndex: 3,
     cursor: 'pointer',
     display: 'none',

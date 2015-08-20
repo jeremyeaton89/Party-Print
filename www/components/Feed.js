@@ -64,7 +64,6 @@ var Feed = React.createClass({
     var interval = setInterval(function() {
       this.getImages();
     }.bind(this), 10000); 
-    this.props.interval = interval; // TODO: remove pause
     window.onhashchange = function(e) {
       if (e.newURL.split('#')[1] !== '/')
         clearInterval(interval);
@@ -135,14 +134,10 @@ var Feed = React.createClass({
       this.props.scrolling = false;
     }.bind(this));
   },
-  pause: function() {
-    clearInterval(this.props.interval);
-  },
   render: function() {
     return (
       <div className='page'>
         <Header left='settings' middle='search' right='print'/>
-    <button id='pause' onClick={this.pause} style={{position: 'fixed', left: 10, top: 100, zIndex: 99999}}>pause</button>
 
         <div 
           ref='promptContainer'

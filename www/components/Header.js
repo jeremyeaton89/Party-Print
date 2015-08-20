@@ -16,6 +16,7 @@ var Header = React.createClass({
 
     setTimeout(function() {
       window.plugin.printer.print(page);
+      $('img[data-print="true"]').click();
     }, 200);
   },
   filter: function() {

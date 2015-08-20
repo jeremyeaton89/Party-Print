@@ -28,6 +28,9 @@
     <feature name="Printer">
         <param name="ios-package" value="APPPrinter" />
     </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <name>PartyPrint</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

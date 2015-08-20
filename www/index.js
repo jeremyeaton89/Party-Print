@@ -1,14 +1,14 @@
 /** @jsx React.DOM */
 
-var React              = require('react/addons');
+var React     = require('react/addons');
 var CSSTransitionGroup = React.addons.CSSTransitionGroup;
-var Router             = require('react-router-component');
-var Location           = Router.Location;
-var Link               = Router.Link;
-var FastClick          = require('./lib/js/fastclick');
+var Router    = require('react-router-component');
+var Location  = Router.Location;
+var Link      = Router.Link;
+var FastClick = require('./lib/js/fastclick');
 
-var Feed     = require('./components/Feed');
-var Settings = require('./components/Settings');
+var Feed      = require('./components/Feed');
+var Settings  = require('./components/Settings');
 
 var AnimatedLocations = React.createClass({
   mixins: [Router.RouterMixin, Router.AsyncRouteRenderingMixin],
@@ -49,8 +49,17 @@ var App = React.createClass({
   }
 });
 
-
-$(function() {
-  if (typeof FastClick == 'function') FastClick(document.body);
-  React.render(<App />, document.getElementById('container'));
-});
+if (typeof window.orientation != 'undefined') {
+  document.addEventListener('deviceready', function() {
+    alert  = navigator.notification.alert;
+    prompt = navigator.notification.prompt;
+    if (typeof FastClick == 'function') FastClick(document.body);
+    React.render(<App />, document.getElementById('container'));
+  }, false);  
+} else {
+  // For Desktop (Development)
+  $(function() {
+    if (typeof FastClick == 'function') FastClick(document.body);
+    React.render(<App />, document.getElementById('container'));
+  });
+}

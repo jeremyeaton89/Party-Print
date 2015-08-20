@@ -37,6 +37,7 @@ var FeedImage = React.createClass({
         <img 
           ref='img'
           data-print={selected}
+          data-print-url={this.props.printURL}
           style={styles.img} 
           src={this.props.src} 
         />
@@ -69,8 +70,8 @@ var styles = {
     width: 50,
     height: 50,
     background: 'rgba(255,255,255,0.5)',
-    left: 55,
-    top: 55,
+    left: 50,
+    top: 50,
     borderRadius: 10,
     position: 'absolute',
     display: 'none',

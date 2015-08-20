@@ -26,3 +26,44 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-07-15 16:53:18.838 PartyPrint[29359:6280253] Resetting plugins due to page load.
 2015-07-15 16:53:18.877 PartyPrint[29359:6280253] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/0573584A-639C-4B07-A6FF-C33D88D37357/data/Containers/Bundle/Application/4D89027E-8703-4B81-B7DE-6A92F589CDF3/PartyPrint.app/www/index.html
+2015-08-18 23:55:04.029 PartyPrint[51330:1114773] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-18 23:55:04.030 PartyPrint[51330:1114773] Multi-tasking -> Device: YES, App: YES
+2015-08-18 23:55:04.040 PartyPrint[51330:1114773] Unlimited access to network resources
+2015-08-18 23:55:04.043 PartyPrint[51330:1114773] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-18 23:55:04.284 PartyPrint[51330:1114773] Resetting plugins due to page load.
+2015-08-18 23:55:04.557 PartyPrint[51330:1114773] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/0573584A-639C-4B07-A6FF-C33D88D37357/data/Containers/Bundle/Application/9ECE97DB-9A46-4F82-B095-AD866609A2E9/PartyPrint.app/www/index.html
+2015-08-19 18:40:13.480 PartyPrint[60338:1222119] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-19 18:40:13.483 PartyPrint[60338:1222119] Multi-tasking -> Device: YES, App: YES
+2015-08-19 18:40:13.499 PartyPrint[60338:1222119] Unlimited access to network resources
+2015-08-19 18:40:13.507 PartyPrint[60338:1222119] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-19 18:40:14.019 PartyPrint[60338:1222119] Resetting plugins due to page load.
+2015-08-19 18:40:14.179 PartyPrint[60338:1222119] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/0573584A-639C-4B07-A6FF-C33D88D37357/data/Containers/Bundle/Application/11573BE0-AEB5-4B97-A9BF-6930EB607E5F/PartyPrint.app/www/index.html
+2015-08-19 18:40:14.288 PartyPrint[60338:1222119] THREAD WARNING: ['Notification'] took '50.587402' ms. Plugin should use a background thread.
+2015-08-19 18:40:29.114 PartyPrint[60452:1222602] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-19 18:40:29.114 PartyPrint[60452:1222602] Multi-tasking -> Device: YES, App: YES
+2015-08-19 18:40:29.115 PartyPrint[60452:1222602] Unlimited access to network resources
+2015-08-19 18:40:29.117 PartyPrint[60452:1222602] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-19 18:40:29.242 PartyPrint[60452:1222602] Resetting plugins due to page load.
+2015-08-19 18:40:29.325 PartyPrint[60452:1222602] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/0573584A-639C-4B07-A6FF-C33D88D37357/data/Containers/Bundle/Application/843E5F75-2667-45F9-AFFF-3D0DDEBE7710/PartyPrint.app/www/index.html
+2015-08-19 18:40:29.373 PartyPrint[60452:1222602] THREAD WARNING: ['Notification'] took '19.937012' ms. Plugin should use a background thread.

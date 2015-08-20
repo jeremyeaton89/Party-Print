@@ -4,16 +4,19 @@ var React = require('react');
 var Utils = require('../utils');
 var Link  = require('react-router-component').Link;
 
-
 var Header = React.createClass({
   print: function() {
-    // TODO: get hi res photos
     var page = '';
     $('img[data-print="true"]').each(function(i, el) {
-      page += el.outerHTML;
+      page += $('<img />').attr('src', $(el).data('print-url')).css({
+        width:   '100%',
+        display: 'inline-block',
+      })[0].outerHTML;
     })
-    console.log(page);
-    window.plugin.printer.print(page);
+
+    setTimeout(function() {
+      window.plugin.printer.print(page);
+    }, 200);
   },
   filter: function() {
     var searchValue = this.refs.searchBar.getDOMNode().value;
@@ -105,7 +108,8 @@ var Header = React.createClass({
       case 'print':
         right = 
           <a
-            style={Utils.merge(styles.iconContainer, { right: 10 })}>
+            style={Utils.merge(styles.iconContainer, { right: 10 })}
+            onClick={this.print}>
             <div style={Utils.merge(styles.icon, { backgroundImage: 'url(img/printer-icon.png)'})}></div>
           </a>
         break;

@@ -26,6 +26,7 @@
 
 @property (retain) NSString* callbackId;
 @property (retain) NSString* printerId;
+@property (retain) NSString* content;
 
 @end
 
@@ -74,8 +75,10 @@
 
     [self adjustPrintController:controller withSettings:settings];
     [self loadContent:content intoPrintController:controller];
+    
+    _content = content;
 
-    if (_printerId) {
+    if (_printerId && _content.length) {
         [self sendToPrinter:controller printer:_printerId];
     }
     else {
@@ -212,7 +215,7 @@
              else
              {
                  _printerId = [printerPicker.selectedPrinter.URL absoluteString];
-                 if (_printerId) [self sendToPrinter:controller printer:_printerId];
+                 if (_printerId && _content.length) [self sendToPrinter:controller printer:_printerId];
              }
          }];
     }

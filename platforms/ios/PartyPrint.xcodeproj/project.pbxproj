@@ -42,6 +42,9 @@
 		FEA6B49EEC66461E800230C0 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFBD593EC8A4D5BBDDCAF6E /* CDVDevice.m */; };
 		F72824A2788D4EC399AB3787 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E12AD0BC097B4373AE3D73C1 /* CDVLogger.m */; };
 		D82445ADB129429C8AF0021D /* APPPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B97F2CF7AB45B38846F4C1 /* APPPrinter.m */; };
+		1F654C223361434FB8376791 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C474A769F423B836938FC /* CDVNotification.m */; };
+		0744C344DAA84955B7E70251 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67673D7DFF6C45BBA04D32E4 /* CDVNotification.bundle */; };
+		991D6479C06C483DAF5BE452 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5229258C4A4444B7B78917E6 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,10 @@
 		DC61C73A85584F5484DC6320 /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		69B97F2CF7AB45B38846F4C1 /* APPPrinter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "APPPrinter.m"; path = "de.appplant.cordova.plugin.printer/APPPrinter.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		08EF5E8A2E2B4D6BB3DA9C37 /* APPPrinter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "APPPrinter.h"; path = "de.appplant.cordova.plugin.printer/APPPrinter.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		849C474A769F423B836938FC /* CDVNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVNotification.m"; path = "org.apache.cordova.dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		3965DC451AE54D2C99B57376 /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "org.apache.cordova.dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		67673D7DFF6C45BBA04D32E4 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
+		5229258C4A4444B7B78917E6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +131,7 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				991D6479C06C483DAF5BE452 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +193,7 @@
 				308D052D1370CCF300D202BF /* icons */,
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* PartyPrint-Info.plist */,
+				67673D7DFF6C45BBA04D32E4 /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = "PartyPrint/Resources";
@@ -196,6 +205,7 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				5229258C4A4444B7B78917E6 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +227,8 @@
 				DC61C73A85584F5484DC6320 /* CDVLogger.h */,
 				69B97F2CF7AB45B38846F4C1 /* APPPrinter.m */,
 				08EF5E8A2E2B4D6BB3DA9C37 /* APPPrinter.h */,
+				849C474A769F423B836938FC /* CDVNotification.m */,
+				3965DC451AE54D2C99B57376 /* CDVNotification.h */,
 			);
 			name = Plugins;
 			path = "PartyPrint/Plugins";
@@ -370,6 +382,7 @@
 				7E7966E11810823500FA85AD /* icon-50@2x.png in Resources */,
 				7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
+				0744C344DAA84955B7E70251 /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +417,7 @@
 				FEA6B49EEC66461E800230C0 /* CDVDevice.m in Sources */,
 				F72824A2788D4EC399AB3787 /* CDVLogger.m in Sources */,
 				D82445ADB129429C8AF0021D /* APPPrinter.m in Sources */,
+				1F654C223361434FB8376791 /* CDVNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

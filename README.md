@@ -1,21 +1,13 @@
+** Party Print
+
+Supplied with your unique #hashtag, partygoers can print their Instagram photos taken at your event! 
+
+* You'll need an ApplePrint equipped photo printer on the same wifi as your mobile device *
+
 ** TODO
 
-- Hash Search
-- Feed Search
-- put image requests on a server
-- set printer => print (button transition, so we can select printer first without printing)
---- settings?
-- stay with images on fetch if you've scrolled
-
-- photo tap transition (checkamrk opacity, border animate)
-- print photo timestamp in feed
-
-*** Also
-
-- callback to deselect photos (cancellations)
-
-
-*** Concerns
-
-- will i be skipping photos?
-- handling pagination (caching)
+- Feed pagination & caching
+- Show that a printer has been selected in the UI (include name?)
+- Enable Settings lock (by password)
+- Enable timeframe for image fetching
+- Android Support (maybe)

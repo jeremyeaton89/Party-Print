@@ -15,6 +15,10 @@ var Feed = React.createClass({
     return {
       maxTagId: null,
       atBottom: true,
+      pageSize: 20,
+      pageHeight: (150 * 20 / 2),
+      imgCount: 0,
+      curPage: 0,
     };
   },
   componentDidMount: function() {
@@ -32,7 +36,7 @@ var Feed = React.createClass({
     var $feedContainer  = $(this.refs.feedContainer.getDOMNode());
 
     this.props.atBottom = (($feedContainer[0].scrollHeight === $feedContainer.innerHeight()) || 
-                          ($feedContainer.scrollTop() + $feedContainer.innerHeight()) >=  $feedContainer[0].scrollHeight);
+                          ($feedContainer.scrollTop() + $feedContainer.innerHeight()) >= $feedContainer[0].scrollHeight);
   },
   componentDidUpdate: function() {
     if (this.props.atBottom) {
@@ -71,7 +75,7 @@ var Feed = React.createClass({
   },
   getImages: function() {
     $.getJSON(
-      'https://api.instagram.com/v1/tags/'+window.tag+'/media/recent?count=100&max_tag_id='+this.props.maxTagId+'&callback=?',
+      'https://api.instagram.com/v1/tags/'+window.tag+'/media/recent?count=30&max_tag_id='+this.props.maxTagId+'&callback=?',
       {
         client_id: '90af4f5aec3f4c0caf32d2cf8ed0d257',
       },
@@ -96,6 +100,7 @@ var Feed = React.createClass({
                 printURL={img.images.standard_resolution.url}
                 username={username}
                 hide={searchVal.length && username.match(searchVal)}
+                page={Math.ceil(++this.props.imgCount / this.props.pageSize)}
               />
             );
           }.bind(this));
@@ -112,15 +117,38 @@ var Feed = React.createClass({
 
     $feedContainer.scroll(function() {
       var prevScrollTop = curScrollTop;
+      var scrollHeight  = $feedContainer[0].scrollHeight;
+
       setTimeout(function() {
         curScrollTop = $feedContainer.scrollTop();
-        if (((curScrollTop !== prevScrollTop) && curScrollTop + $feedContainer.innerHeight()) <  $feedContainer[0].scrollHeight &&
+        if (((curScrollTop !== prevScrollTop) && curScrollTop + $feedContainer.innerHeight()) <  scrollHeight &&
           this.props.scrolling === false) {
           $scrollButton.fadeIn(300);
         } else if ($scrollButton.is(':visible') && this.props.scrolling === false) {
           $scrollButton.fadeOut(300);
-        }  
+        } 
       }.bind(this), 200);
+
+      var curPage = Math.ceil($feedContainer.scrollTop() / this.props.pageHeight);
+
+      if (curPage !== this.props.curPage) {
+        this.props.curPage = curPage;
+        var totalPages     = Math.ceil(this.props.imgCount / this.props.pageSize);
+      
+        for (var i = 1; i <= totalPages; i++) {
+          var $page =  $('img[data-page='+i+']');
+
+          if ([curPage - 1, curPage, curPage + 1].indexOf(i) !== -1) {
+            $page.each(function(i, el) {
+              var src = $(el).attr('data-src');
+              $(el).attr('src', src).css('visibility', 'visible');
+            });
+          } else {            
+            $page.attr('src', '/img/dummy-img.png').css('visibility', 'hidden');
+          }
+        } 
+      }
+
     }.bind(this))
   },
   scrollToBottom: function() {

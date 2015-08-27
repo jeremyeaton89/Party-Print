@@ -32,8 +32,8 @@ var Settings = React.createClass({
     var $hoursText = $(this.refs.hoursText.getDOMNode());
 
     if (!$input.val()) {
-      $input.val(12);
-      window.ageLimit = 12;
+      $input.val(6);
+      window.ageLimit = 6;
     } else {
       window.ageLimit = $input.val();
     }
@@ -78,7 +78,7 @@ var Settings = React.createClass({
               <input
                 ref='ageLimit'
                 type='text'
-                defaultValue={window.ageLimit ? window.ageLimit : 12}
+                defaultValue={window.ageLimit ? window.ageLimit : 6}
                 onKeyUp={this.validateAgeLimit}
                 onBlur={this.saveAgeLimit}
                 style={Utils.merge(styles.input, { width: 40 })}

@@ -16,30 +16,26 @@ var FeedImage = React.createClass({
       selected: !this.state.selected
     });
   },
-  componentDidMount: function() {
-    setTimeout(function() {
-      this.refs.container.getDOMNode().style.opacity = 1;  
-    }.bind(this), 200);
-  },
   render: function() {
     var selected         = this.state.selected;
     var displayContainer = this.props.hide ? 'none'              : 'inline-block';
     var displayCheckmark = selected        ? 'block'             : 'none';
     var border           = selected        ? '3px solid #37CBCB' : 'none';
-
     return (
       <div 
         ref='container'
-        className='fade'
         style={Utils.merge(styles.container, {border: border, display: displayContainer})}
         onClick={this.toggleSelected}
         data-username={this.props.username}>
         <img 
           ref='img'
+          className='feed-image'
+          data-src={this.props.src}
           data-print={selected}
           data-print-url={this.props.printURL}
+          data-page={this.props.page}
           style={styles.img} 
-          src={this.props.src} 
+          src='/img/dummy-img.png'
         />
         <img 
           ref='checkmark'
@@ -53,6 +49,7 @@ var FeedImage = React.createClass({
 
 var styles = {
   container: {
+    background: 'lightgray',
     cursor: 'pointer',
     width: 150,
     height: 150,
@@ -61,10 +58,10 @@ var styles = {
     boxSizing: 'border-box',
     margin: 0,
     position: 'relative',
-    opacity: 0,
   },
   img: {
     width: '100%',
+    visibility: 'hidden',
   },
   checkmark: {
     width: 50,

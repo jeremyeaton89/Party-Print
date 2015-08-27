@@ -14595,3 +14595,429 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-08-20 16:07:26.475 PartyPrint[71143:1464466] age: 42555140.49900007 date: Tue Apr 15 2014 03:15:05 GMT-0700 (PDT)
 2015-08-20 16:07:26.475 PartyPrint[71143:1464466] age: 42556787.50099993 date: Tue Apr 15 2014 02:47:38 GMT-0700 (PDT)
 2015-08-20 16:07:26.475 PartyPrint[71143:1464466] age: 42586509.50300002 date: Mon Apr 14 2014 18:32:16 GMT-0700 (PDT)
+2015-08-21 22:48:30.214 PartyPrint[93170:1882265] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9AD67D4C-88C1-4508-A2F2-31BE3ED555D4/data/Containers/Data/Application/E14475E4-6E72-4FEC-9ECA-F9F027C74639/Library/Cookies/Cookies.binarycookies
+2015-08-21 22:48:30.299 PartyPrint[93170:1882265] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 22:48:30.300 PartyPrint[93170:1882265] Multi-tasking -> Device: YES, App: YES
+2015-08-21 22:48:30.303 PartyPrint[93170:1882265] Unlimited access to network resources
+2015-08-21 22:48:30.306 PartyPrint[93170:1882265] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 22:48:30.929 PartyPrint[93170:1882265] Resetting plugins due to page load.
+2015-08-21 22:48:31.188 PartyPrint[93170:1882265] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9AD67D4C-88C1-4508-A2F2-31BE3ED555D4/data/Containers/Bundle/Application/F33B9278-ABA4-4C90-A31E-5142D2220F08/PartyPrint.app/www/index.html
+2015-08-21 22:48:31.256 PartyPrint[93170:1882265] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:48:31.256 PartyPrint[93170:1882265] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:48:31.256 PartyPrint[93170:1882265] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:48:31.256 PartyPrint[93170:1882265] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 22:48:31.256 PartyPrint[93170:1882265] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 22:48:31.256 PartyPrint[93170:1882265] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 22:48:31.257 PartyPrint[93170:1882265] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:48:31.257 PartyPrint[93170:1882265] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:48:49.839 PartyPrint[93170:1882265] WARN: Each child in an array should have a unique "key" prop. Check the render method of Feed. See http://fb.me/react-warning-keys for more information.
+2015-08-21 22:50:52.721 PartyPrint[93453:1884674] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 22:50:52.721 PartyPrint[93453:1884674] Multi-tasking -> Device: YES, App: YES
+2015-08-21 22:50:52.723 PartyPrint[93453:1884674] Unlimited access to network resources
+2015-08-21 22:50:52.724 PartyPrint[93453:1884674] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 22:50:52.826 PartyPrint[93453:1884674] Resetting plugins due to page load.
+2015-08-21 22:50:53.022 PartyPrint[93453:1884674] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/0573584A-639C-4B07-A6FF-C33D88D37357/data/Containers/Bundle/Application/0C67CAFB-9644-47FA-AC03-50060BEECD58/PartyPrint.app/www/index.html
+2015-08-21 22:50:53.058 PartyPrint[93453:1884674] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:50:53.059 PartyPrint[93453:1884674] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:50:53.059 PartyPrint[93453:1884674] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:50:53.059 PartyPrint[93453:1884674] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 22:50:53.059 PartyPrint[93453:1884674] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 22:50:53.059 PartyPrint[93453:1884674] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 22:50:53.059 PartyPrint[93453:1884674] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:50:53.059 PartyPrint[93453:1884674] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:51:06.623 PartyPrint[93453:1884674] WARN: Each child in an array should have a unique "key" prop. Check the render method of Feed. See http://fb.me/react-warning-keys for more information.
+2015-08-21 22:52:08.185 PartyPrint[93633:1885923] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 22:52:08.186 PartyPrint[93633:1885923] Multi-tasking -> Device: YES, App: YES
+2015-08-21 22:52:08.187 PartyPrint[93633:1885923] Unlimited access to network resources
+2015-08-21 22:52:08.189 PartyPrint[93633:1885923] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 22:52:08.692 PartyPrint[93633:1885923] Resetting plugins due to page load.
+2015-08-21 22:52:08.861 PartyPrint[93633:1885923] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/4CF36B04-3EF7-4168-B4DF-3768C7AFFC59/PartyPrint.app/www/index.html
+2015-08-21 22:52:08.932 PartyPrint[93633:1885923] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:52:08.932 PartyPrint[93633:1885923] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:52:08.932 PartyPrint[93633:1885923] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:52:08.932 PartyPrint[93633:1885923] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 22:52:08.932 PartyPrint[93633:1885923] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 22:52:08.933 PartyPrint[93633:1885923] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 22:52:08.933 PartyPrint[93633:1885923] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:52:08.933 PartyPrint[93633:1885923] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:55:52.405 PartyPrint[93887:1889010] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 22:55:52.406 PartyPrint[93887:1889010] Multi-tasking -> Device: YES, App: YES
+2015-08-21 22:55:52.407 PartyPrint[93887:1889010] Unlimited access to network resources
+2015-08-21 22:55:52.409 PartyPrint[93887:1889010] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 22:55:52.564 PartyPrint[93887:1889010] Resetting plugins due to page load.
+2015-08-21 22:55:52.654 PartyPrint[93887:1889010] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/191B9C3A-8E96-445E-9E72-64D66F7A9543/PartyPrint.app/www/index.html
+2015-08-21 22:55:52.711 PartyPrint[93887:1889010] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:55:52.711 PartyPrint[93887:1889010] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:55:52.712 PartyPrint[93887:1889010] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:55:52.712 PartyPrint[93887:1889010] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 22:55:52.712 PartyPrint[93887:1889010] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 22:55:52.712 PartyPrint[93887:1889010] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 22:55:52.712 PartyPrint[93887:1889010] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:55:52.712 PartyPrint[93887:1889010] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:56:32.144 PartyPrint[94004:1889509] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 22:56:32.145 PartyPrint[94004:1889509] Multi-tasking -> Device: YES, App: YES
+2015-08-21 22:56:32.146 PartyPrint[94004:1889509] Unlimited access to network resources
+2015-08-21 22:56:32.148 PartyPrint[94004:1889509] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 22:56:32.337 PartyPrint[94004:1889509] Resetting plugins due to page load.
+2015-08-21 22:56:32.430 PartyPrint[94004:1889509] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/9523494D-61D7-450A-A8AB-E05961E00124/PartyPrint.app/www/index.html
+2015-08-21 22:56:32.525 PartyPrint[94004:1889509] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:56:32.525 PartyPrint[94004:1889509] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:56:32.525 PartyPrint[94004:1889509] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:56:32.525 PartyPrint[94004:1889509] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 22:56:32.525 PartyPrint[94004:1889509] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 22:56:32.525 PartyPrint[94004:1889509] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 22:56:32.526 PartyPrint[94004:1889509] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 22:56:32.526 PartyPrint[94004:1889509] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:27.946 PartyPrint[94179:1892678] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 23:00:27.947 PartyPrint[94179:1892678] Multi-tasking -> Device: YES, App: YES
+2015-08-21 23:00:27.949 PartyPrint[94179:1892678] Unlimited access to network resources
+2015-08-21 23:00:27.951 PartyPrint[94179:1892678] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 23:00:28.248 PartyPrint[94179:1892678] Resetting plugins due to page load.
+2015-08-21 23:00:28.343 PartyPrint[94179:1892678] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/D3E4C3ED-93FD-4DF6-8225-8A20AB91C3BA/PartyPrint.app/www/index.html
+2015-08-21 23:00:28.453 PartyPrint[94179:1892678] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:28.453 PartyPrint[94179:1892678] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:28.453 PartyPrint[94179:1892678] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:28.453 PartyPrint[94179:1892678] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 23:00:28.453 PartyPrint[94179:1892678] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 23:00:28.453 PartyPrint[94179:1892678] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 23:00:28.453 PartyPrint[94179:1892678] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:28.453 PartyPrint[94179:1892678] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:58.104 PartyPrint[94300:1893212] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 23:00:58.105 PartyPrint[94300:1893212] Multi-tasking -> Device: YES, App: YES
+2015-08-21 23:00:58.107 PartyPrint[94300:1893212] Unlimited access to network resources
+2015-08-21 23:00:58.109 PartyPrint[94300:1893212] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 23:00:58.474 PartyPrint[94300:1893212] Resetting plugins due to page load.
+2015-08-21 23:00:58.567 PartyPrint[94300:1893212] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/9AE304AF-E9BA-4384-8228-15E0368A6642/PartyPrint.app/www/index.html
+2015-08-21 23:00:58.645 PartyPrint[94300:1893212] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:58.646 PartyPrint[94300:1893212] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:58.646 PartyPrint[94300:1893212] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:58.646 PartyPrint[94300:1893212] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 23:00:58.646 PartyPrint[94300:1893212] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 23:00:58.646 PartyPrint[94300:1893212] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 23:00:58.646 PartyPrint[94300:1893212] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:00:58.646 PartyPrint[94300:1893212] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:02:37.231 PartyPrint[94300:1893212] THREAD WARNING: ['Notification'] took '27.638916' ms. Plugin should use a background thread.
+2015-08-21 23:06:16.229 PartyPrint[94488:1896930] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 23:06:16.229 PartyPrint[94488:1896930] Multi-tasking -> Device: YES, App: YES
+2015-08-21 23:06:16.231 PartyPrint[94488:1896930] Unlimited access to network resources
+2015-08-21 23:06:16.233 PartyPrint[94488:1896930] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 23:06:16.388 PartyPrint[94488:1896930] Resetting plugins due to page load.
+2015-08-21 23:06:16.483 PartyPrint[94488:1896930] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/AD8619C7-ECB0-4208-B216-A1333B6EFEA8/PartyPrint.app/www/index.html
+2015-08-21 23:06:16.547 PartyPrint[94488:1896930] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:06:16.547 PartyPrint[94488:1896930] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:06:16.548 PartyPrint[94488:1896930] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:06:16.548 PartyPrint[94488:1896930] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 23:06:16.548 PartyPrint[94488:1896930] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 23:06:16.548 PartyPrint[94488:1896930] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 23:06:16.548 PartyPrint[94488:1896930] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:06:16.548 PartyPrint[94488:1896930] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:06:29.809 PartyPrint[94600:1897417] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 23:06:29.810 PartyPrint[94600:1897417] Multi-tasking -> Device: YES, App: YES
+2015-08-21 23:06:29.812 PartyPrint[94600:1897417] Unlimited access to network resources
+2015-08-21 23:06:29.817 PartyPrint[94600:1897417] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 23:06:30.024 PartyPrint[94600:1897417] Resetting plugins due to page load.
+2015-08-21 23:06:30.169 PartyPrint[94600:1897417] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/6AD7F43D-8600-4600-AA39-D7B2D2E0C3E6/PartyPrint.app/www/index.html
+2015-08-21 23:06:30.276 PartyPrint[94600:1897417] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:06:30.276 PartyPrint[94600:1897417] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:06:30.276 PartyPrint[94600:1897417] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:06:30.276 PartyPrint[94600:1897417] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 23:06:30.276 PartyPrint[94600:1897417] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 23:06:30.277 PartyPrint[94600:1897417] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 23:06:30.277 PartyPrint[94600:1897417] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:06:30.277 PartyPrint[94600:1897417] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:14:31.469 PartyPrint[94835:1903156] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 23:14:31.470 PartyPrint[94835:1903156] Multi-tasking -> Device: YES, App: YES
+2015-08-21 23:14:31.471 PartyPrint[94835:1903156] Unlimited access to network resources
+2015-08-21 23:14:31.473 PartyPrint[94835:1903156] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 23:14:31.623 PartyPrint[94835:1903156] Resetting plugins due to page load.
+2015-08-21 23:14:31.734 PartyPrint[94835:1903156] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/A8185978-4235-437C-BFA9-C2C3F58C7BE7/PartyPrint.app/www/index.html
+2015-08-21 23:14:31.795 PartyPrint[94835:1903156] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:14:31.795 PartyPrint[94835:1903156] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:14:31.795 PartyPrint[94835:1903156] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:14:31.795 PartyPrint[94835:1903156] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 23:14:31.795 PartyPrint[94835:1903156] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 23:14:31.796 PartyPrint[94835:1903156] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 23:14:31.796 PartyPrint[94835:1903156] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:14:31.796 PartyPrint[94835:1903156] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:16:00.289 PartyPrint[94966:1904249] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 23:16:00.290 PartyPrint[94966:1904249] Multi-tasking -> Device: YES, App: YES
+2015-08-21 23:16:00.292 PartyPrint[94966:1904249] Unlimited access to network resources
+2015-08-21 23:16:00.293 PartyPrint[94966:1904249] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 23:16:00.520 PartyPrint[94966:1904249] Resetting plugins due to page load.
+2015-08-21 23:16:00.640 PartyPrint[94966:1904249] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/AB6CB7FB-B5FD-424A-8F76-B2C0B7569193/PartyPrint.app/www/index.html
+2015-08-21 23:16:00.678 PartyPrint[94966:1904249] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:16:00.678 PartyPrint[94966:1904249] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:16:00.678 PartyPrint[94966:1904249] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:16:00.679 PartyPrint[94966:1904249] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 23:16:00.679 PartyPrint[94966:1904249] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 23:16:00.679 PartyPrint[94966:1904249] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 23:16:00.679 PartyPrint[94966:1904249] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:16:00.679 PartyPrint[94966:1904249] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:22:37.802 PartyPrint[95171:1906484] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-21 23:22:37.803 PartyPrint[95171:1906484] Multi-tasking -> Device: YES, App: YES
+2015-08-21 23:22:37.805 PartyPrint[95171:1906484] Unlimited access to network resources
+2015-08-21 23:22:37.807 PartyPrint[95171:1906484] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-21 23:22:38.014 PartyPrint[95171:1906484] Resetting plugins due to page load.
+2015-08-21 23:22:38.137 PartyPrint[95171:1906484] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9EC2F0AE-9C96-4CB2-8BED-DAF36A96E129/data/Containers/Bundle/Application/A987E926-CD50-4F90-BCB5-69C933BDA50E/PartyPrint.app/www/index.html
+2015-08-21 23:22:38.178 PartyPrint[95171:1906484] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:22:38.178 PartyPrint[95171:1906484] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:22:38.178 PartyPrint[95171:1906484] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:22:38.178 PartyPrint[95171:1906484] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-21 23:22:38.178 PartyPrint[95171:1906484] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-21 23:22:38.178 PartyPrint[95171:1906484] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-21 23:22:38.178 PartyPrint[95171:1906484] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-21 23:22:38.179 PartyPrint[95171:1906484] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-24 18:25:20.519 PartyPrint[95171:2480117] Terminating since there is no system app.
+2015-08-25 13:18:44.973 PartyPrint[20224:2767960] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/0F1DE157-FE12-48C1-ABBB-36371B97280B/data/Containers/Data/Application/38146BA1-5A50-452A-BC71-444A154D2251/Library/Cookies/Cookies.binarycookies
+2015-08-25 13:18:45.019 PartyPrint[20224:2767960] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-25 13:18:45.019 PartyPrint[20224:2767960] Multi-tasking -> Device: YES, App: YES
+2015-08-25 13:18:45.025 PartyPrint[20224:2767960] Unlimited access to network resources
+2015-08-25 13:18:45.028 PartyPrint[20224:2767960] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-25 13:18:45.694 PartyPrint[20224:2767960] Resetting plugins due to page load.
+2015-08-25 13:18:45.933 PartyPrint[20224:2767960] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/0F1DE157-FE12-48C1-ABBB-36371B97280B/data/Containers/Bundle/Application/50EC2DDE-019B-466D-B132-2CFBD8041AB9/PartyPrint.app/www/index.html
+2015-08-25 13:18:45.989 PartyPrint[20224:2767960] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:18:45.989 PartyPrint[20224:2767960] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:18:45.989 PartyPrint[20224:2767960] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:18:45.989 PartyPrint[20224:2767960] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-25 13:18:45.989 PartyPrint[20224:2767960] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-25 13:18:45.989 PartyPrint[20224:2767960] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-25 13:18:45.989 PartyPrint[20224:2767960] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:18:45.990 PartyPrint[20224:2767960] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:19:25.600 PartyPrint[20399:2769015] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-25 13:19:25.601 PartyPrint[20399:2769015] Multi-tasking -> Device: YES, App: YES
+2015-08-25 13:19:25.602 PartyPrint[20399:2769015] Unlimited access to network resources
+2015-08-25 13:19:25.604 PartyPrint[20399:2769015] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-25 13:19:25.714 PartyPrint[20399:2769015] Resetting plugins due to page load.
+2015-08-25 13:19:25.913 PartyPrint[20399:2769015] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9AD67D4C-88C1-4508-A2F2-31BE3ED555D4/data/Containers/Bundle/Application/40E54E39-1385-4514-83D0-61851F19C1D2/PartyPrint.app/www/index.html
+2015-08-25 13:19:25.948 PartyPrint[20399:2769015] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:19:25.949 PartyPrint[20399:2769015] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:19:25.949 PartyPrint[20399:2769015] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:19:25.949 PartyPrint[20399:2769015] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-25 13:19:25.949 PartyPrint[20399:2769015] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-25 13:19:25.949 PartyPrint[20399:2769015] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-25 13:19:25.950 PartyPrint[20399:2769015] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:19:25.950 PartyPrint[20399:2769015] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:22:29.797 PartyPrint[20564:2771147] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-25 13:22:29.798 PartyPrint[20564:2771147] Multi-tasking -> Device: YES, App: YES
+2015-08-25 13:22:29.800 PartyPrint[20564:2771147] Unlimited access to network resources
+2015-08-25 13:22:29.801 PartyPrint[20564:2771147] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-25 13:22:29.936 PartyPrint[20564:2771147] Resetting plugins due to page load.
+2015-08-25 13:22:30.038 PartyPrint[20564:2771147] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9AD67D4C-88C1-4508-A2F2-31BE3ED555D4/data/Containers/Bundle/Application/52C9999E-7CC4-4AFF-9B11-E00FC4455010/PartyPrint.app/www/index.html
+2015-08-25 13:22:30.071 PartyPrint[20564:2771147] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:22:30.071 PartyPrint[20564:2771147] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:22:30.071 PartyPrint[20564:2771147] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:22:30.071 PartyPrint[20564:2771147] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-25 13:22:30.071 PartyPrint[20564:2771147] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-25 13:22:30.071 PartyPrint[20564:2771147] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-25 13:22:30.071 PartyPrint[20564:2771147] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:22:30.071 PartyPrint[20564:2771147] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:37:36.344 PartyPrint[20934:2785456] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-25 13:37:36.345 PartyPrint[20934:2785456] Multi-tasking -> Device: YES, App: YES
+2015-08-25 13:37:36.346 PartyPrint[20934:2785456] Unlimited access to network resources
+2015-08-25 13:37:36.348 PartyPrint[20934:2785456] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-25 13:37:36.461 PartyPrint[20934:2785456] Resetting plugins due to page load.
+2015-08-25 13:37:36.552 PartyPrint[20934:2785456] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9AD67D4C-88C1-4508-A2F2-31BE3ED555D4/data/Containers/Bundle/Application/27BC3F46-41E8-4156-8354-406A19690F38/PartyPrint.app/www/index.html
+2015-08-25 13:37:36.588 PartyPrint[20934:2785456] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:37:36.588 PartyPrint[20934:2785456] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:37:36.589 PartyPrint[20934:2785456] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:37:36.589 PartyPrint[20934:2785456] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-25 13:37:36.589 PartyPrint[20934:2785456] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-25 13:37:36.589 PartyPrint[20934:2785456] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-25 13:37:36.589 PartyPrint[20934:2785456] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:37:36.589 PartyPrint[20934:2785456] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:38:08.790 PartyPrint[21053:2786247] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-25 13:38:08.791 PartyPrint[21053:2786247] Multi-tasking -> Device: YES, App: YES
+2015-08-25 13:38:08.793 PartyPrint[21053:2786247] Unlimited access to network resources
+2015-08-25 13:38:08.795 PartyPrint[21053:2786247] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-25 13:38:08.942 PartyPrint[21053:2786247] Resetting plugins due to page load.
+2015-08-25 13:38:09.033 PartyPrint[21053:2786247] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9AD67D4C-88C1-4508-A2F2-31BE3ED555D4/data/Containers/Bundle/Application/E13ED071-32B4-458B-9D4B-A27EB50635DC/PartyPrint.app/www/index.html
+2015-08-25 13:38:09.068 PartyPrint[21053:2786247] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:38:09.068 PartyPrint[21053:2786247] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:38:09.068 PartyPrint[21053:2786247] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:38:09.069 PartyPrint[21053:2786247] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-25 13:38:09.069 PartyPrint[21053:2786247] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-25 13:38:09.069 PartyPrint[21053:2786247] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-25 13:38:09.069 PartyPrint[21053:2786247] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:38:09.069 PartyPrint[21053:2786247] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:05.392 PartyPrint[21308:2787292] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-25 13:39:05.393 PartyPrint[21308:2787292] Multi-tasking -> Device: YES, App: YES
+2015-08-25 13:39:05.394 PartyPrint[21308:2787292] Unlimited access to network resources
+2015-08-25 13:39:05.395 PartyPrint[21308:2787292] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-25 13:39:05.540 PartyPrint[21308:2787292] Resetting plugins due to page load.
+2015-08-25 13:39:05.671 PartyPrint[21308:2787292] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9AD67D4C-88C1-4508-A2F2-31BE3ED555D4/data/Containers/Bundle/Application/20B963FB-2A04-4643-B608-0EBEF072B634/PartyPrint.app/www/index.html
+2015-08-25 13:39:05.714 PartyPrint[21308:2787292] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:05.714 PartyPrint[21308:2787292] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:05.714 PartyPrint[21308:2787292] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:05.715 PartyPrint[21308:2787292] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-25 13:39:05.715 PartyPrint[21308:2787292] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-25 13:39:05.715 PartyPrint[21308:2787292] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-25 13:39:05.715 PartyPrint[21308:2787292] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:05.715 PartyPrint[21308:2787292] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:23.983 PartyPrint[21428:2787812] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-25 13:39:23.984 PartyPrint[21428:2787812] Multi-tasking -> Device: YES, App: YES
+2015-08-25 13:39:23.986 PartyPrint[21428:2787812] Unlimited access to network resources
+2015-08-25 13:39:23.989 PartyPrint[21428:2787812] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-25 13:39:24.155 PartyPrint[21428:2787812] Resetting plugins due to page load.
+2015-08-25 13:39:24.294 PartyPrint[21428:2787812] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/9AD67D4C-88C1-4508-A2F2-31BE3ED555D4/data/Containers/Bundle/Application/B6964586-EAC4-416D-ADFD-49EF032A5334/PartyPrint.app/www/index.html
+2015-08-25 13:39:24.334 PartyPrint[21428:2787812] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:24.334 PartyPrint[21428:2787812] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:24.334 PartyPrint[21428:2787812] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:24.334 PartyPrint[21428:2787812] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-25 13:39:24.334 PartyPrint[21428:2787812] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-25 13:39:24.334 PartyPrint[21428:2787812] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-25 13:39:24.335 PartyPrint[21428:2787812] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 13:39:24.335 PartyPrint[21428:2787812] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 14:28:40.908 PartyPrint[23734:2812876] Apache Cordova native platform version 3.7.0 is starting.
+2015-08-25 14:28:40.919 PartyPrint[23734:2812876] Multi-tasking -> Device: YES, App: YES
+2015-08-25 14:28:40.928 PartyPrint[23734:2812876] Unlimited access to network resources
+2015-08-25 14:28:40.937 PartyPrint[23734:2812876] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-08-25 14:28:41.461 PartyPrint[23734:2812876] Resetting plugins due to page load.
+2015-08-25 14:28:41.731 PartyPrint[23734:2812876] Finished load of: file:///Users/jeremyeaton/Library/Developer/CoreSimulator/Devices/0573584A-639C-4B07-A6FF-C33D88D37357/data/Containers/Bundle/Application/D2A86BFD-BD92-456D-AD29-04CFB507B79A/PartyPrint.app/www/index.html
+2015-08-25 14:28:41.798 PartyPrint[23734:2812876] WARN: Warning: Something is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 14:28:41.799 PartyPrint[23734:2812876] WARN: Warning: App is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 14:28:41.799 PartyPrint[23734:2812876] WARN: Warning: AnimatedLocations is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 14:28:41.799 PartyPrint[23734:2812876] WARN: Warning: transferPropsTo is deprecated. See http://fb.me/react-transferpropsto for more information.
+2015-08-25 14:28:41.799 PartyPrint[23734:2812876] WARN: Warning: Required prop `transitionName` was not specified in `ReactCSSTransitionGroup`. Check the render method of `AnimatedLocations`.
+2015-08-25 14:28:41.799 PartyPrint[23734:2812876] WARN: Warning: Do not pass React.DOM.div to JSX or createFactory. Use the string "div" instead.
+2015-08-25 14:28:41.799 PartyPrint[23734:2812876] WARN: Warning: Feed is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory
+2015-08-25 14:28:41.799 PartyPrint[23734:2812876] WARN: Warning: Header is calling a React component directly. Use a factory or JSX instead. See: http://fb.me/react-legacyfactory

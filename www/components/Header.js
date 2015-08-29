@@ -4,7 +4,14 @@ var React = require('react');
 var Utils = require('../utils');
 var Link  = require('react-router-component').Link;
 
+var UserLi = require('./UserSearchItem');
+
 var Header = React.createClass({
+  getInitialState: function() {
+    return {
+      searchList: [], 
+    };
+  },
   print: function() {
     var page = '';
     $('img[data-print="true"]').each(function(i, el) {
@@ -19,33 +26,53 @@ var Header = React.createClass({
       $('img[data-print="true"]').click();
     }, 200);
   },
-  filter: function() {
-    var searchValue = this.refs.searchBar.getDOMNode().value;
+  fetchMatches: function() {
+    if (!window.tag) {
+      this.refs.searchBar.getDOMNode().value = '';
+      return;
+    }
+
+    var searchValue = this.refs.searchBar.getDOMNode().value.replace('@', '');
     var $xIcon      = $(this.refs.xIcon.getDOMNode());
 
     if (searchValue.length) {
-      $('#feedContainer div:not([data-username^="'+searchValue+'"])').hide();
-      $('#feedContainer div[data-username^="'+searchValue+'"]').show();
-      $xIcon.show();
+      $xIcon.css('visibility', 'visible');
+      $.getJSON(
+        'https://api.instagram.com/v1/users/search?q='+searchValue+'&count=10&callback=?',
+        {
+          client_id: '90af4f5aec3f4c0caf32d2cf8ed0d257',
+        },
+        function(response, status) {
+          if (status === 'error') {
+            console.log('Failed to fetch Users');
+          } else {
+            var userListItems = response.data.map(function(user, i) {
+              return (
+                <UserLi
+                  username={'@'+user.username}
+                  src={user.profile_picture}
+                  onClick={this.getUserImages.bind(this, user.id, user.username)}
+                />
+              );
+            }.bind(this));
+
+            this.setState({ searchList: userListItems });
+          }
+        }.bind(this)
+      );
     } else {
-      $('#feedContainer div').show();
-      $xIcon.hide();
+      $xIcon.css('visibility', 'hidden');
     }
   },
-  handleBlur: function() {
-    setTimeout(function() {
-      if (this.xIconClick) {
-        this.xIconClick = false;
-      } else {
-        if (!this.refs.searchBar.getDOMNode().classList.contains('invisible')) this.animateSearchBar(); // if user taps 'done'
-        this.props.searchHandlers.blur();
-      }
-    }.bind(this), 200)
+  getUserImages: function(userId, username) {
+    $(this.refs.searchBar.getDOMNode()).val('@'+username);
+    this.setState({ searchList: [] });
+    this.props.getUserImages(userId);
   },
   clearSearchBar: function() {
     $(this.refs.searchBar.getDOMNode()).val('').focus();
-    $(this.refs.xIcon.getDOMNode()).hide();
-    $('#feedContainer div').show();
+    $(this.refs.xIcon.getDOMNode()).css('visibility', 'hidden');
+    this.setState({ searchList: [] });
   },
   render: function() {
     var left   = '';
@@ -57,18 +84,18 @@ var Header = React.createClass({
         left = 
           <Link
             noTransition
-            href='/settings'
-            style={Utils.merge(styles.iconContainer, { left: 10 })}>
-            <div style={Utils.merge(styles.icon, { backgroundImage: 'url(img/settings-icon.png)'})}></div>
+            href       = '/settings'
+            style      = {Utils.merge(styles.iconContainer, { left: 10 })}>
+            <div style = {Utils.merge(styles.icon, { backgroundImage: 'url(img/settings-icon.png)'})}></div>
           </Link> 
         break;
       case 'feed':
         left = 
           <Link
             noTransition
-            href='/'
-            style={Utils.merge(styles.iconContainer, { left: 10 })}>
-            <div style={Utils.merge(styles.icon, { backgroundImage: 'url(img/feed-icon.png)', width: 30, height: 30 })}></div>
+            href       = '/'
+            style      = {Utils.merge(styles.iconContainer, { left: 10 })}>
+            <div style = {Utils.merge(styles.icon, { backgroundImage: 'url(img/feed-icon.png)', width: 30, height: 30 })}></div>
           </Link> 
     }
     switch(this.props.middle) {
@@ -78,29 +105,34 @@ var Header = React.createClass({
         middle = 
           <div style={styles.searchBarContainer}>
             <input 
-              type='search' 
-              ref='searchBar'
-              placeholder='Search by Username'
-              style={Utils.merge(styles.searchBar, { width: searchBarWidth })}
-              onChange={this.filter}
+              type        = 'search' 
+              ref         = 'searchBar'
+              placeholder = 'Search by Username'
+              style       = {Utils.merge(styles.searchBar, { width: searchBarWidth })}
+              onChange    = {this.fetchMatches}
             />
             <div 
-              ref='xIcon'
-              style={Utils.merge(styles.xIconContainer, {  })}
-              onClick={this.clearSearchBar}>
+              ref     = 'xIcon'
+              style   = {styles.xIconContainer}
+              onClick = {this.clearSearchBar}>
               <img 
                 src='img/x-icon.png'
                 style={styles.xIcon}
               />
             </div>
+            <ul 
+              ref   = 'searchList'
+              style = {Utils.merge(styles.searchList, { width: searchBarWidth })}>
+              {this.state.searchList}
+            </ul>
           </div>
         break;
       default:
         middle = 
           <div style={styles.titleContainer}>
             <h1 
-              ref='title' 
-              style={styles.title}>
+              ref   = 'title' 
+              style = {styles.title}>
               {this.props.title}
             </h1>
           </div>
@@ -109,9 +141,9 @@ var Header = React.createClass({
       case 'print':
         right = 
           <a
-            style={Utils.merge(styles.iconContainer, { right: 10 })}
-            onClick={this.print}>
-            <div style={Utils.merge(styles.icon, { backgroundImage: 'url(img/printer-icon.png)'})}></div>
+            style      = {Utils.merge(styles.iconContainer, { right: 10 })}
+            onClick    = {this.print}>
+            <div style = {Utils.merge(styles.icon, { backgroundImage: 'url(img/printer-icon.png)'})}></div>
           </a>
         break;
     }
@@ -159,10 +191,16 @@ var styles = {
     fontSize: 14,
     color: 'gray',
   },
-  printButton: {
-    position: 'absolute',
-    top: 20,
-    right: 10,
+  searchList: {
+    position: 'relative',
+    top: 19,
+    left: '-50%',
+    width: 200,   
+    padding: 0,
+    margin: 0,
+    zIndex: 3,
+    listStyleType: 'none',
+    background: 'white',
   },
   xIcon: {
     width: 12,
@@ -181,7 +219,7 @@ var styles = {
     left: 'calc(50% - 27px)',
     zIndex: 3,
     cursor: 'pointer',
-    display: 'none',
+    visibility: 'hidden',
   },
   icon: {
     height: 25,
@@ -217,6 +255,11 @@ var styles = {
     left: '50%',
     width: '75%',
     top: 25,
+  },
+  printButton: {
+    position: 'absolute',
+    top: 20,
+    right: 10,
   },
 }
 

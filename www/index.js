@@ -39,6 +39,9 @@ var AnimatedLocations = React.createClass({
 });
 
 var App = React.createClass({
+  componentWillUnmount: function() {
+    localStorage.clear();
+  },
   render: function() {
     return (
       <AnimatedLocations hash className='main'>

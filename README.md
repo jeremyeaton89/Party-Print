@@ -6,7 +6,7 @@ Supplied with your unique #hashtag, partygoers can tag and print their Instagram
 
 ## TODO
 
-- Feed pagination & caching ( & persistence btwn settings - feed )
+- Feed pagination & caching ( & persistence btwn settings & Feed )
 - Show that a printer has been selected in the UI (include name?)
 - Enable Settings lock (by password)
 - Icon design/implementation

@@ -11,6 +11,9 @@ var FeedImage = React.createClass({
       selected: false,
     };
   },
+  componentWillMount: function() {
+    if (this.props.selected) this.setState({ selected: this.props.selected });
+  },
   toggleSelected: function() {
     this.setState({
       selected: !this.state.selected
@@ -21,6 +24,7 @@ var FeedImage = React.createClass({
     var displayContainer = this.props.hide ? 'none'              : 'inline-block';
     var displayCheckmark = selected        ? 'block'             : 'none';
     var border           = selected        ? '3px solid #37CBCB' : 'none';
+
     return (
       <div 
         ref='container'

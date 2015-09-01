@@ -11,3 +11,9 @@ Supplied with your unique #hashtag, partygoers can tag and print their Instagram
 - Enable Settings lock (by password)
 - Icon design/implementation
 - Templates from s3
+
+### Bugs
+
+- deselection after print
+- scroll blankness
+- going from user search to recent feed

@@ -14,16 +14,19 @@ var Header = React.createClass({
   },
   print: function() {
     var page = '';
-    $('img[data-print="true"]').each(function(i, el) {
-      page += $('<img />').attr('src', $(el).data('print-url')).css({
+    window.printQueue.forEach(function(img) {
+      page += $('<img />').attr('src', img.printURL).css({
         width:   '100%',
         display: 'inline-block',
       })[0].outerHTML;
-    })
+    });
 
     setTimeout(function() {
-      window.plugin.printer.print(page);
-      $('img[data-print="true"]').click();
+      // window.plugin.printer.print(page);
+      for (var i = 0; i < window.printQueue.length; i++) {
+        $('img[data-src="'+ window.printQueue[i].src +'"]').click();
+      }
+      window.printQueue = [];
     }, 200);
   },
   fetchMatches: function() {

@@ -11,13 +11,26 @@ var FeedImage = React.createClass({
       selected: false,
     };
   },
-  componentWillMount: function() {
-    if (this.props.selected) this.setState({ selected: this.props.selected });
+  componentDidMount: function() {
+    if (this.props.selected) {
+      this.setState({
+        selected: this.props.selected
+      });
+    }
   },
   toggleSelected: function() {
+    this.state.selected = !this.state.selected;
     this.setState({
-      selected: !this.state.selected
+      selected: this.state.selected
     });
+
+    var imgData = {
+      src: this.props.src,
+      printURL: this.props.printURL,
+      selected: this.state.selected,
+    }
+
+    this.props.handlePrintQueue(imgData)
   },
   render: function() {
     var selected         = this.state.selected;
@@ -27,22 +40,17 @@ var FeedImage = React.createClass({
 
     return (
       <div 
-        ref='container'
         style={Utils.merge(styles.container, {border: border, display: displayContainer})}
-        onClick={this.toggleSelected}
-        data-username={this.props.username}>
+        onClick={this.toggleSelected}>
         <img 
-          ref='img'
           className='feed-image'
           data-src={this.props.src}
-          data-print={selected}
           data-print-url={this.props.printURL}
           data-page={this.props.page}
           style={styles.img} 
-          src='/img/dummy-img.png'
+          src='img/dummy-img.png'
         />
         <img 
-          ref='checkmark'
           style={Utils.merge(styles.checkmark, {display: displayCheckmark})} 
           src='img/checkmark-icon.png'
         />
@@ -53,7 +61,6 @@ var FeedImage = React.createClass({
 
 var styles = {
   container: {
-    background: 'lightgray',
     cursor: 'pointer',
     width: 150,
     height: 150,
@@ -66,6 +73,7 @@ var styles = {
   img: {
     width: '100%',
     visibility: 'hidden',
+    cursor: 'pointer',
   },
   checkmark: {
     width: 50,
@@ -76,6 +84,7 @@ var styles = {
     borderRadius: 10,
     position: 'absolute',
     display: 'none',
+    'cursor': 'pointer',
   },
 };
 

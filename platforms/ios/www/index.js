@@ -39,6 +39,9 @@ var AnimatedLocations = React.createClass({
 });
 
 var App = React.createClass({
+  componentWillMount: function() {
+    window.printQueue = [];
+  },
   componentWillUnmount: function() {
     localStorage.clear();
   },

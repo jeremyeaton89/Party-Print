@@ -9,6 +9,19 @@ var Utils = {
     }
     return result;
   },
+  objEqual: function(obj1, obj2) {
+    for (var prop in obj1) {
+      if (obj1[prop] !== obj2[prop]) return false; 
+    }
+    return true;
+  },
+  objInArr: function(obj, array) {
+    for (var i = 0; i < array.length; i++) {
+      if (Utils.objEqual(obj, array[i])) return true;
+    };
+
+    return false;
+  }
 }
 
 module.exports = Utils;

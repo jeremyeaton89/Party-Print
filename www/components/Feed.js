@@ -2,6 +2,8 @@
 
 var React = require('react');
 
+var Utils = require('../utils');
+
 var Header    = require('./Header')
 var FeedImage = require('./FeedImage');
 
@@ -9,6 +11,7 @@ var Feed = React.createClass({
   getInitialState: function() {
     return {
       images: [],
+      printQueue: window.printQueue,
     };
   },
   getDefaultProps: function() {
@@ -24,6 +27,8 @@ var Feed = React.createClass({
     };
   },
   componentDidMount: function() {
+    window.objInArr = Utils.objInArr;
+    window.objEqual = Utils.objEqual;
     if (!window.tag) {
       $(this.refs.promptContainer.getDOMNode()).fadeIn(300, function() {
         this.addPromptHandlers();
@@ -80,7 +85,6 @@ var Feed = React.createClass({
   },
   startImageFetcher: function() {
     var json = JSON.parse(localStorage.getItem('recent:'      + window.tag));
-    console.log('JSON: ', json);
     var meta = JSON.parse(localStorage.getItem('recent-meta:' + window.tag));
 
     if (json) {
@@ -90,6 +94,10 @@ var Feed = React.createClass({
           src: img.src,
           printURL: img.printURL,
           imgCount: ++this.props.imgCount,
+          selected: Utils.objInArr({
+            src: img.src,
+            printURL: img.printURL, 
+          }, window.printQueue),
         });
       }.bind(this));
 
@@ -99,6 +107,7 @@ var Feed = React.createClass({
       setTimeout(function() {
         $(this.refs.feedContainer.getDOMNode()).scrollTop(meta.scrollTop + 1);
         this.props.scrolling = false;
+
       }.bind(this), 200);
 
       localStorage.removeItem('recent:'      + window.tag);
@@ -171,10 +180,16 @@ var Feed = React.createClass({
               src: img.images.low_resolution.url,
               printURL: img.images.standard_resolution.url,
               imgCount: ++this.props.imgCount,
+              selected: Utils.objInArr({
+                src: img.images.low_resolution.url,
+                printURL: img.images.standard_resolution.url, 
+              }, window.printQueue),
             })
           }.bind(this));
 
           this.setState({ images: this.state.images })
+          var $feedContainer = $(this.refs.feedContainer.getDOMNode());
+          $feedContainer.scrollTop($feedContainer.scrollTop() + 1);
         }
       }.bind(this)
     );
@@ -202,7 +217,7 @@ var Feed = React.createClass({
       var curPage = Math.ceil($feedContainer.scrollTop() / this.props.pageHeight);
 
       // paginate (hide/show)
-      if (curPage !== this.props.curPage) {
+      if (curPage === 0 || curPage !== this.props.curPage) {
         this.props.curPage = curPage;
         var totalPages     = Math.ceil(this.props.imgCount / this.props.pageSize);
       
@@ -233,12 +248,41 @@ var Feed = React.createClass({
       this.props.scrolling = false;
     }.bind(this));
   },
+  handlePrintQueue: function(imgData) {
+    var selected = imgData.selected;
+    delete imgData.selected;
+
+    if (selected) {
+      window.printQueue.push(imgData)
+    } else {
+      window.printQueue.forEach(function(data, i) {
+        if (data.src === imgData.src) {
+          window.printQueue.splice(i, 1);
+        }
+      }.bind(this));
+    }
+    this.setState({ printQueue: window.printQueue });
+  },
+  removePrintItem: function(i) {
+    var dequeuedImgSrc = window.printQueue[i].src
+    window.printQueue.splice(i, 1);
+    $('img[data-src="'+dequeuedImgSrc+'"]').click();
+
+    // Ensure click happens
+    setTimeout(function() {
+      if ($('img[data-src="'+dequeuedImgSrc+'"]').siblings('img').is(':visible'))
+        $('img[data-src="'+dequeuedImgSrc+'"]').click();
+    }, 200);
+    this.setState({ printQueue: window.printQueue });
+  },
   _pushFeedImage: function(props) {
     this.state.images.push(
       <FeedImage 
         src={props.src}
         printURL={props.printURL}
         page={Math.ceil(props.imgCount / this.props.pageSize)}
+        selected={props.selected}
+        handlePrintQueue={this.handlePrintQueue}
       />
     );
   },
@@ -256,6 +300,25 @@ var Feed = React.createClass({
     localStorage.setItem('recent-meta:' + window.tag, JSON.stringify(meta));
   },
   render: function() {
+    var printQueueImgs = window.printQueue.map(function(img, i) {
+      return (
+        <div
+          style={styles.printImgContainer}
+          onClick={this.removePrintItem.bind(this, i)}>
+          <div style={styles.xIconContainer}>
+            <img 
+              style={styles.xIcon}
+              src='img/x-icon.png'
+            />
+          </div>
+          <img 
+            style={styles.printImg}
+            src={img.src}
+          />
+        </div>
+      );
+    }.bind(this));
+
     return (
       <div className='page'>
         <Header 
@@ -264,6 +327,11 @@ var Feed = React.createClass({
           right         = 'print'
           getUserImages = {this.getUserImages}
         />
+
+        <div 
+         style={styles.printQueue}>
+         {printQueueImgs}
+        </div>
 
         <div 
           ref       = 'promptContainer'
@@ -307,6 +375,41 @@ var Feed = React.createClass({
 });
 
 var styles = {
+  printQueue: {
+    position: 'absolute',
+    top: 75,
+    right: 0,
+    width: 50,
+    minHeight: 300,
+    zIndex: 999,
+  },
+  printImgContainer: {
+    position: 'relative',
+  },
+  printImg: {
+    width: 42,
+    height: 42,
+    cursor: 'pointer',
+    borderRadius: 20,
+    marginTop: 5,
+  },
+  xIconContainer: {
+    width: 20,
+    height: 20,
+    top: 3,
+    right: 3,
+    borderRadius: 10,
+    position: 'absolute',
+    background: 'rgba(128,128,128,0.7)',
+    cursor: 'pointer',
+  },
+  xIcon: {
+    width: 12,
+    height: 12,
+    position: 'relative',
+    bottom: 2,
+    left: 4,
+  },
   feedContainer: {
     width: '100%',
     height: '100%',

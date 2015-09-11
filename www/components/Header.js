@@ -22,12 +22,11 @@ var Header = React.createClass({
     });
 
     setTimeout(function() {
-      // window.plugin.printer.print(page);
+      window.plugin.printer.print(page);
       for (var i = 0; i < window.printQueue.length; i++) {
-        $('img[data-src="'+ window.printQueue[i].src +'"]').click();
+        this.props.dequeueImage(i);
       }
-      window.printQueue = [];
-    }, 200);
+    }.bind(this), 200);
   },
   fetchMatches: function() {
     if (!window.tag) {
@@ -76,6 +75,7 @@ var Header = React.createClass({
     $(this.refs.searchBar.getDOMNode()).val('').focus();
     $(this.refs.xIcon.getDOMNode()).css('visibility', 'hidden');
     this.setState({ searchList: [] });
+    this.props.getRecentImages();
   },
   render: function() {
     var left   = '';

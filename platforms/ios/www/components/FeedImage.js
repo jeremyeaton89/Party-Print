@@ -6,52 +6,43 @@ var CSSTransitionGroup = React.addons.CSSTransitionGroup;
 var Utils = require('../utils');
 
 var FeedImage = React.createClass({
-  getInitialState: function() {
-    return {
-      selected: false,
-    };
-  },
-  componentDidMount: function() {
-    if (this.props.selected) {
-      this.setState({
-        selected: this.props.selected
-      });
-    }
-  },
-  toggleSelected: function() {
-    this.state.selected = !this.state.selected;
-    this.setState({
-      selected: this.state.selected
-    });
+  enqueueImage: function() {
+    var $checkmark = $(this.refs.checkmark.getDOMNode()),
+        $img       = $(this.refs.img.getDOMNode());
+
+    $checkmark.css('opacity', 1);
+    $img.css('opacity', 0.5);
+
+    setTimeout(function() {
+      $checkmark.css('opacity', 0);
+      $img.css('opacity', 1);
+    }, 1000);
 
     var imgData = {
       src: this.props.src,
       printURL: this.props.printURL,
-      selected: this.state.selected,
     }
 
-    this.props.handlePrintQueue(imgData)
+    this.props.enqueueImage(imgData)
   },
   render: function() {
-    var selected         = this.state.selected;
-    var displayContainer = this.props.hide ? 'none'              : 'inline-block';
-    var displayCheckmark = selected        ? 'block'             : 'none';
-    var border           = selected        ? '3px solid #37CBCB' : 'none';
-
     return (
       <div 
-        style={Utils.merge(styles.container, {border: border, display: displayContainer})}
-        onClick={this.toggleSelected}>
+        style={styles.container}
+        onClick={this.enqueueImage}>
         <img 
-          className='feed-image'
+          ref='img'
+          className='feed-image fade'
+          style={styles.img} 
+          src='img/dummy-img.png'
           data-src={this.props.src}
           data-print-url={this.props.printURL}
           data-page={this.props.page}
-          style={styles.img} 
-          src='img/dummy-img.png'
         />
         <img 
-          style={Utils.merge(styles.checkmark, {display: displayCheckmark})} 
+          ref='checkmark'
+          className='fade'
+          style={styles.checkmark} 
           src='img/checkmark-icon.png'
         />
       </div>
@@ -72,8 +63,8 @@ var styles = {
   },
   img: {
     width: '100%',
-    visibility: 'hidden',
     cursor: 'pointer',
+    visibility: 'hidden',
   },
   checkmark: {
     width: 50,
@@ -83,7 +74,7 @@ var styles = {
     top: 50,
     borderRadius: 10,
     position: 'absolute',
-    display: 'none',
+    opacity: 0,
     'cursor': 'pointer',
   },
 };

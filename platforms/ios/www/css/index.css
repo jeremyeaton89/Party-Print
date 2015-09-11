@@ -44,6 +44,6 @@ html, body {
   transition: .25s ease-in;
 }
 .fade {
-  -webkit-transition: opacity 4s ease-out;
-  transition: opacity 4s ease-out;
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
 }
